@@ -1,0 +1,208 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #2f0750, #220132, #180456, #450052);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientMove{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Bottom shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.navbar img{
+    height: 30px;
+    width: 100px;
+    margin-left: -2px;
+    margin-top: 10px;
+}
+
+.list{
+    margin-right: 5%;
+    display: flex;
+}
+
+.list ul,li{
+    display: flex;
+}   
+
+li{
+    margin-right: 20px;
+}
+
+li a{
+    color: black;
+    text-decoration: none;
+}
+li a:hover{
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 13%;
+}
+
+.side-navbar{
+    background: linear-gradient(-45deg, rgb(14, 20, 130),rgb(103, 13, 119));
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    color: aliceblue;
+    padding: 15px;
+    top: 0;
+    left: -60%;
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+
+.side-navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.side-navbar a:hover{
+    color: aliceblue;
+}
+
+.close-btn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 85%;
+    margin-bottom: 30px;
+}
+
+img{
+    height: 100px;
+    width: 500px;
+    margin-left: 60px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.glass-box {
+  width: 550px;
+  padding: 20px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  /* Shadow */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.glass-box input {
+  width: 50%;
+  padding: 12px;
+  margin: 10px 0;
+
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+
+  color: white;
+  font-size: 14px;
+}
+
+.glass-box input::placeholder {
+  color: white;
+}
+
+.glass-box button {
+  width: 25%;
+  padding: 12px;
+  margin-top: 15px;
+
+  background: rgba(175, 171, 171, 0.3);
+  border: none;
+  border-radius: 8px;
+
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: background 0.3s;
+}
+
+.glass-box button:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+
+
+@media (max-width: 600px) {
+  
+  .glass-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .glass-box input {
+    width: 50%;
+  }
+  
+  img{
+    width: 300px;
+    height: 60px;
+    margin-left: 20px;
+  }
+  .glass-box button {
+    width: 30%;
+  }
+    
+  .list{
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
+}

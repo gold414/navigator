@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NAVO</title>
+  <link rel="icon" href="dp nobg.png">
+  <link rel="stylesheet" href="map.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="NAVO">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div><img src="NAVO.png" alt="NAVO"></div>
+      <div class="toggle" onclick="showNavbar()">☰</div>
+      <div class="list">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- SIDE NAVBAR -->
+    <div class="side-navbar">
+      <h3 class="close-btn" onclick="closeNavbar()">X</h3>
+      <ul>
+        <li class="side-navbar-link"><a href="home.html">Home</a></li>
+        <li class="side-navbar-link"><a href="maps.html">Maps</a></li>
+        <li class="side-navbar-link"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <img src="logo.png" alt="Logo" class="logo">
+
+    <!-- GLASS BOX -->
+    <div class="glass-box">
+      <h2>Navigator</h2>
+
+      <input type="text" id="currentRoom" placeholder="Enter current room (e.g. 0231)">
+      <br>
+      <input type="text" id="destinationRoom" placeholder="Enter destination room (e.g. 0451)">
+      <br>
+
+      <button onclick="navigate()">Navigate</button>
+      <button onclick="clearFields()">Clear</button>
+
+
+      <p id="output"></p>
+    </div>
+
+  </div>
+
+  <script src="map.js"></script>
+</body>
+</html>
